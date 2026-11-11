@@ -15,7 +15,7 @@ function customizeSubscription(source) {
   // The upstream file is minified JSON5. Replace only the two top-level display fields.
   const namePattern = /^(\{id:[^,]+,name:)([^,]+)(,version:)/;
   // Match the complete quoted author value, including commas inside the string.
-  const authorPattern = /^(\{id:[^,]+,name:[^,]+,version:[^,]+,author:)(?:'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*")(,checkUpdateUrl:)/;
+  const authorPattern = /^(\{id:[^,]+,name:[^,]+,version:[^,]+,author:)((?:'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*"))(,checkUpdateUrl:)/;
   if (!namePattern.test(source)) throw new Error('Upstream format changed: top-level name not found');
   if (!authorPattern.test(source)) throw new Error('Upstream format changed: top-level author not found');
 
