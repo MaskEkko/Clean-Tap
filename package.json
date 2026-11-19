@@ -1,0 +1,12 @@
+{
+  "name": "clean-tap",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "json5": "2.2.3"
+  }
+}
